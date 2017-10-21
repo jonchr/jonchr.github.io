@@ -1,1 +1,2 @@
 # jonchr.github.io
+This is currently my online portfolio. It was built from the StartBootstrap Vitality template with moderate modifications. I have plenty of ideas for future additions, so please let me know your feedback via the Contact Me form.

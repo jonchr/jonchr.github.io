@@ -137,7 +137,7 @@ h6 {
         #mainNav .navbar-collapse .navbar-nav > .nav-item:last-child {
           margin-right: 0; }
         #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link {
-          padding: 10px; }
+          padding: 15px; }
           #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active, #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active:focus, #mainNav .navbar-collapse .navbar-nav > .nav-item > .nav-link.active:hover {
             color: #EF4035;
             border-radius: 0;
@@ -756,3 +756,16 @@ a.text-primary {
 
 .owl-carousel.owl-theme.portfolio-carousel .owl-controls .owl-next {
   right: 0; }
+
+/*For <Welcome/> message to properly fit on phones*/
+@media (max-width: 575px) {
+  header.masthead .masthead-title {
+    font-size: 3rem;
+    line-height: 3rem; } }
+/*For <Welcome/> message and email address to properly fit on iPhone 6 and smaller*/
+@media (max-width: 400px) {
+  header.masthead .masthead-title {
+    font-size: 2.5rem;
+    line-height: 2.5rem; }
+  footer.footer p {
+    font-size: 18px; } }

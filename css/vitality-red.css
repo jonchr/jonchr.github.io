@@ -55,14 +55,6 @@ a {
   a:hover, a:focus {
     color: #c81b10;
     text-decoration: none; }
-a.normal {
-  color: inherit; 
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s; }
-  a.normal:hover, a.normal:focus {
-    color: #b8b8b8;
-    text-decoration: none; }
 
 p {
   font-size: 18px;
@@ -119,17 +111,17 @@ h6 {
   @media (min-width: 992px) {
     #mainNav {
       height: auto;
-      padding: 10px 0px 30px;
+      padding: 30px 0;
       -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
       -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
       transition: padding-top 0.3s, padding-bottom 0.3s;
       background-color: transparent; }
       #mainNav.navbar-shrink {
-        padding: 0px;
+        padding: 5px 0;
         background-color: #222; }
       #mainNav .navbar-brand {
         font-size: 26px;
-        line-height: 40px; }
+        line-height: 50px; }
         #mainNav .navbar-brand img {
           height: 46px; }
       #mainNav .navbar-collapse .navbar-nav > .nav-item {
@@ -756,16 +748,3 @@ a.text-primary {
 
 .owl-carousel.owl-theme.portfolio-carousel .owl-controls .owl-next {
   right: 0; }
-
-/*For <Welcome/> message to properly fit on phones*/
-@media (max-width: 575px) {
-  header.masthead .masthead-title {
-    font-size: 3rem;
-    line-height: 3rem; } }
-/*For <Welcome/> message and email address to properly fit on iPhone 6 and smaller*/
-@media (max-width: 400px) {
-  header.masthead .masthead-title {
-    font-size: 2.5rem;
-    line-height: 2.5rem; }
-  footer.footer p {
-    font-size: 18px; } }

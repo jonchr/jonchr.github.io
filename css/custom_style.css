@@ -11,11 +11,13 @@ a.normal:hover, a.normal:focus {
     text-decoration: none; 
 }
 
+/* Adjusts padding such that the down-arrow button appears more nicely*/
 section.button-margin {
   padding-top: 75px;
   padding-bottom: 75px;
 }
 
+/* Formatting for down-arrow button */
 section .container-fluid .scroll-down {
   position: relative;
   bottom: -50px;
@@ -42,6 +44,7 @@ section .container-fluid .scroll-down {
       outline: none; 
     }
 
+/* Formatting for down-arrow button */
 section .container .scroll-down {
   position: relative;
   bottom: -50px;
@@ -68,6 +71,17 @@ section .container .scroll-down {
       outline: none; 
     }
 
+/* Colors text below project pop ups as white and lessens margin*/
+figcaption .mfp-bottom-bar p {
+  color: white;
+  margin-bottom: 3px;
+}
+
+/* Aligns the project pop ups to the top of the screen instead of the middle */
+.mfp-container:before {
+  vertical-align: top; }
+
+/* Colors down arrow as dark (for sections with white backgrounds) */
 .dark {
   color: #343a40 !important;
   border-color: #343a40 !important;
@@ -77,17 +91,19 @@ section .container .scroll-down {
     border-color: rgba(52, 58, 64, 0.5) !important;
   }
 
+/* Shortens the height of the contact form */
 .floating-label-form-group input, .floating-label-form-group textarea {
   font-size: 1.25em;
 }
 
-/*Sets size of Skill SVGs*/
+
+/* Sets size of Skill SVGs */
 #html, #css, #js, #jquery, #react, #node, #express, #mysql, #mongo, #tableau {
   height: 100px;
   width: 100px;
 }
 
-/* Shortens header*/
+/* Shortens header */
 @media (min-width: 992px) {
 	#mainNav {
 		padding: 10px 0px 30px; 
@@ -100,7 +116,7 @@ section .container .scroll-down {
     }
 } 
 
-/*For <Welcome/> message to properly fit on phones*/
+/* For <Welcome/> message to properly fit on phones */
 @media (max-width: 575px) {
   	header.masthead .masthead-title {
     	font-size: 3rem;
@@ -108,7 +124,7 @@ section .container .scroll-down {
     } 
 }
 
-/*For <Welcome/> message and email address to properly fit on iPhone 6 and smaller*/
+/* For <Welcome/> message and email address to properly fit on iPhone 6 and smaller */
 @media (max-width: 400px) {
   	header.masthead .masthead-title {
     	font-size: 2.5rem;

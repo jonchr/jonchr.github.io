@@ -1,6 +1,10 @@
 /*! Magnific Popup - v1.1.0 - 2016-02-20
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2016 Dmitry Semenov; */
+
+// Minor additions & modifications by Jon Christensen 2017
+// These changes are indicated by comments that are opened with //^
+
 ;(function (factory) { 
 if (typeof define === 'function' && define.amd) { 
  // AMD. Register as an anonymous module. 
@@ -777,7 +781,6 @@ MagnificPopup.prototype = {
 			arr = key.split('_');
 			if(arr.length > 1) {
 				var el = template.find(EVENT_NS + '-'+arr[0]);
-
 				if(el.length > 0) {
 					var attr = arr[1];
 					if(attr === 'replaceWith') {
@@ -789,6 +792,18 @@ MagnificPopup.prototype = {
 							el.attr('src', value);
 						} else {
 							el.replaceWith( $('<img>').attr('src', value).attr('class', el.attr('class')) );
+						}
+					//^ Added section to handle addition of href attribute for <a> links
+					} else if(attr === 'href') {
+						if(!value) {
+							//^If there is no link, clears the parent attribute
+							el.parent().html("");
+						} else if(el.is('a')) {
+							//^ Sets the html content and href attribute to the value
+							el.attr('href', value).html(value); 
+						} else {
+							//^ Replaces it with a <a> link with the value as the html content and href value
+							el.replaceWith( $('<a>').attr('href', value).attr('class', el.attr('class')).html(value) );
 						}
 					} else {
 						el.attr(arr[1], value);
@@ -1124,6 +1139,70 @@ var _imgInterval,
 			}
 		}
 		return '';
+	},
+	// ^ Added method for handling desc attributes
+	_getDesc = function(item) {
+	if(item.data && item.data.type !== undefined)
+		return item.data.type;
+
+	var src = mfp.st.image.descSrc;
+
+	if(src) {
+		if($.isFunction(src)) {
+			return src.call(mfp, item);
+		} else if(item.el) {
+			return item.el.attr(src) || '';
+		}
+	}
+	return '';
+	},
+	// ^ Added method for handling tech attribtues
+	_getTech = function(item) {
+	if(item.data && item.data.type !== undefined)
+		return item.data.type;
+
+	var src = mfp.st.image.techSrc;
+
+	if(src) {
+		if($.isFunction(src)) {
+			return src.call(mfp, item);
+		} else if(item.el) {
+			return item.el.attr(src) || '';
+		}
+	}
+	return '';
+	},
+	// ^ Added method for handling Github attribute
+	_getGithub = function(item) {
+	if(item.data && item.data.type !== undefined)
+		return item.data.type;
+
+	var src = mfp.st.image.githubSrc;
+
+	if(src) {
+		if($.isFunction(src)) {
+			return src.call(mfp, item);
+		} else if(item.el) {
+			return item.el.attr(src) || '';
+		}
+	}
+	return '';
+	},
+	// ^ Added method for handling Live Link attribute
+	_getLink = function(item) {
+	if(item.data && item.data.type !== undefined)
+		return item.data.type;
+
+	var src = mfp.st.image.linkSrc;
+
+	if(src) {
+		if($.isFunction(src)) {
+			return src.call(mfp, item);
+		} else if(item.el) {
+			return item.el.attr(src) || '';
+		}
+	}
+	return '';
 	};
 
 $.magnificPopup.registerModule('image', {
@@ -1135,13 +1214,22 @@ $.magnificPopup.registerModule('image', {
 						'<div class="mfp-img"></div>'+
 						'<figcaption>'+
 							'<div class="mfp-bottom-bar">'+
-								'<div class="mfp-title"></div>'+
+								'<b><p class="mfp-title"></p></b>'+ //^ Added bolding
+								'<p class="mfp-desc"></p>'+ //^ Added line for description
+								'<p>Technologies: <span class="mfp-tech"></span></p>'+ //^ Added line for technologies
+								'<p>Github: <a href="https://github.com/jonchr/Psychic-Game" target="_blank" class="mfp-github"></a></p>'+ //^ Added line with link to Github repo. Does not appear if no link is provided
+								'<p>Live Link: <a target="_blank" class="mfp-link"></a></p>'+ //^ Added line with link to live site. Does not appear if no link is provided
 								'<div class="mfp-counter"></div>'+
 							'</div>'+
 						'</figcaption>'+
 					'</figure>'+
 				'</div>',
 		cursor: 'mfp-zoom-out-cur',
+		//^ Added keys & values directing methods to the correct object attributes
+		descSrc: 'desc',
+		githubSrc: 'github',
+		linkSrc: 'livelink',
+		techSrc: 'tech', 
 		titleSrc: 'title',
 		verticalFit: true,
 		tError: '<a href="%url%">The image</a> could not be loaded.'
@@ -1322,6 +1410,11 @@ $.magnificPopup.registerModule('image', {
 
 			mfp._parseMarkup(template, {
 				title: _getTitle(item),
+				//^ Added object keys and method properties
+				desc: _getDesc(item),
+				tech: _getTech(item),
+				github_href: _getGithub(item),
+				link_href: _getLink(item),
 				img_replaceWith: item.img
 			}, item);
 

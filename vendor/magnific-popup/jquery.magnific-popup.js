@@ -635,6 +635,12 @@ MagnificPopup.prototype = {
 		}
 	},
 	_openClick: function(e, el, options) {
+		
+		//^ If the 'data-open' value is true of the object the user clicks on, ends the popup openClick function to allow the parent a link to work
+		if($(e.target).attr("data-open")) {
+			return;
+		}
+		
 		var midClick = options.midClick !== undefined ? options.midClick : $.magnificPopup.defaults.midClick;
 
 
@@ -1142,67 +1148,67 @@ var _imgInterval,
 	},
 	// ^ Added method for handling desc attributes
 	_getDesc = function(item) {
-	if(item.data && item.data.type !== undefined)
-		return item.data.type;
+		if(item.data && item.data.type !== undefined)
+			return item.data.type;
 
-	var src = mfp.st.image.descSrc;
+		var src = mfp.st.image.descSrc;
 
-	if(src) {
-		if($.isFunction(src)) {
-			return src.call(mfp, item);
-		} else if(item.el) {
-			return item.el.attr(src) || '';
+		if(src) {
+			if($.isFunction(src)) {
+				return src.call(mfp, item);
+			} else if(item.el) {
+				return item.el.attr(src) || '';
+			}
 		}
-	}
-	return '';
+		return '';
 	},
 	// ^ Added method for handling tech attribtues
 	_getTech = function(item) {
-	if(item.data && item.data.type !== undefined)
-		return item.data.type;
+		if(item.data && item.data.type !== undefined)
+			return item.data.type;
 
-	var src = mfp.st.image.techSrc;
+		var src = mfp.st.image.techSrc;
 
-	if(src) {
-		if($.isFunction(src)) {
-			return src.call(mfp, item);
-		} else if(item.el) {
-			return item.el.attr(src) || '';
+		if(src) {
+			if($.isFunction(src)) {
+				return src.call(mfp, item);
+			} else if(item.el) {
+				return item.el.attr(src) || '';
+			}
 		}
-	}
-	return '';
+		return '';
 	},
 	// ^ Added method for handling Github attribute
 	_getGithub = function(item) {
-	if(item.data && item.data.type !== undefined)
-		return item.data.type;
+		if(item.data && item.data.type !== undefined)
+			return item.data.type;
 
-	var src = mfp.st.image.githubSrc;
+		var src = mfp.st.image.githubSrc;
 
-	if(src) {
-		if($.isFunction(src)) {
-			return src.call(mfp, item);
-		} else if(item.el) {
-			return item.el.attr(src) || '';
+		if(src) {
+			if($.isFunction(src)) {
+				return src.call(mfp, item);
+			} else if(item.el) {
+				return item.el.attr(src) || '';
+			}
 		}
-	}
-	return '';
+		return '';
 	},
 	// ^ Added method for handling Live Link attribute
 	_getLink = function(item) {
-	if(item.data && item.data.type !== undefined)
-		return item.data.type;
+		if(item.data && item.data.type !== undefined)
+			return item.data.type;
 
-	var src = mfp.st.image.linkSrc;
+		var src = mfp.st.image.linkSrc;
 
-	if(src) {
-		if($.isFunction(src)) {
-			return src.call(mfp, item);
-		} else if(item.el) {
-			return item.el.attr(src) || '';
+		if(src) {
+			if($.isFunction(src)) {
+				return src.call(mfp, item);
+			} else if(item.el) {
+				return item.el.attr(src) || '';
+			}
 		}
-	}
-	return '';
+		return '';
 	};
 
 $.magnificPopup.registerModule('image', {

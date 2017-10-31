@@ -96,6 +96,9 @@ figcaption .mfp-bottom-bar p {
   font-size: 1.25em;
 }
 
+.instructions {
+  margin-bottom: 12px;
+}
 
 /* Sets size of Skill SVGs */
 #html, #css, #js, #jquery, #react, #node, #express, #mysql, #mongo, #tableau {

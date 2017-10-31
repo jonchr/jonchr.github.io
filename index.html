@@ -308,19 +308,25 @@
           <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".fullstack">Full Stack</button>
           <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".group">Group</button>
         </div>
+        
+        <!-- Instructions hidden on mobile devices/md screen size and smaller -->
+        <i class="instructions d-none d-lg-block">(Click the image for project details or the red slider to open it in a new tab)</i>
+        
         <div class="portfolio-grid clearfix" id="portfolioList">
 
           <!-- Grid Item 1 -->
           <div class="mix frontend" href="img/portfolio_grid/hangman.png" title="Jurassic Hangman" desc="A dinosaur-themed Hangman game" tech="HTML, CSS, Bootstrap, Javascript, and jQuery" github="https://github.com/jonchr/Hangman-Game" livelink="https://jonchr.github.io/Hangman-Game">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/hangmanlogo.png" alt="Jurassic Hangman">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Jurassic Hangman</a>
-                  <span class="text-category">Front End Application</span>
+              <a href="https://jonchr.github.io/Hangman-Game" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Jurassic Hangman</span>
+                    <span class="text-category" data-open="true">Front End Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -328,27 +334,31 @@
           <div class="mix frontend group" href="img/portfolio_grid/tripio.png" title="Tripio" desc="An online web app that estimates the airline, car rental, and hotel costs of a trip" tech="HTML, CSS, Bootstrap, Javascript, jQuery, AJAX, Chart.js, QPX-Express API, and Hotwire.com API" github="https://github.com/sharklemon/tripio" livelink="https://sharklemon.github.io/tripio">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/tripio.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Tripio</a>
-                  <span class="text-category">Front End Group Project</span>
+              <a href="https://sharklemon.github.io/tripio" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Tripio</span>
+                    <span class="text-category" data-open="true">Front End Group Project</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
           <!-- Grid Item 3 -->
-          <div class="mix fullstack group" href="img/portfolio_grid/hoppin.png" title="Hop.Pin" desc="The fastest and easiest way to see what's cool to do at your destination" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, Sequelize, Express.js, Handlebars, Passport.js, and Leaflet.js" github="https://github.com/jonchr/Hop.pin" livelink="https://hop-pin.herokuapp.com/">
+          <div class="mix fullstack group" href="img/portfolio_grid/hoppin.png" title="Hop.Pin" desc="The fastest and easiest way to see what's cool to do at your destination" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, Sequelize, Express.js, Handlebars, Passport.js, and Leaflet.js" github="https://github.com/jonchr/Hop.pin" livelink="https://hop-pin.herokuapp.com">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/hoppin.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Hop.Pin</a>
-                  <span class="text-category">Full Stack Group Project</span>
+              <a href="https://hop-pin.herokuapp.com" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Hop.Pin</span>
+                    <span class="text-category" data-open="true">Full Stack Group Project</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -356,27 +366,31 @@
           <div class="mix frontend" href="img/portfolio_grid/trivia.png" title="Who Wants to Be a Trivia Master?" desc="A 90's game show themed Trivia Game using Javascript logic, jQuery, and plenty of attention to detail" tech="HTML, CSS, Bootstrap, Javascript, and jQuery" github="https://github.com/jonchr/TriviaGame" livelink="https://jonchr.github.io/TriviaGame">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/trivia.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Who Wants to Be a Trivia Master?</a>
-                  <span class="text-category">Front End Application</span>
+              <a href="https://jonchr.github.io/TriviaGame" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Who Wants to Be a Trivia Master?</span>
+                    <span class="text-category" data-open="true">Front End Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
           <!-- Grid Item 5 -->
-          <div class="mix fullstack" href="img/portfolio_grid/burger.png" title="Build-a-Burger" desc="A full stack web app that tracks burger consumption" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, MySQL, Express.js, and Handlebars" github="https://github.com/jonchr/EatDaBurger" livelink="https://warm-meadow-54516.herokuapp.com/">
+          <div class="mix fullstack" href="img/portfolio_grid/burger.png" title="Build-a-Burger" desc="A full stack web app that tracks burger consumption" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, MySQL, Express.js, and Handlebars" github="https://github.com/jonchr/EatDaBurger" livelink="https://warm-meadow-54516.herokuapp.com">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/burger.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Build-a-Burger</a>
-                  <span class="text-category">Full Stack Application</span>
+              <a href="https://warm-meadow-54516.herokuapp.com/" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Build-a-Burger</span>
+                    <span class="text-category" data-open="true">Full Stack Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -384,13 +398,15 @@
           <div class="mix fullstack" href="img/portfolio_grid/bingo.png" title="Bingo" desc="A full stack application designed to lighten up the class on a Friday" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, MySQL, Express.js, and Handlebars" github="https://github.com/jonchr/bingo" livelink="https://gw-coding-bingo.herokuapp.com">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/bingo.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Bingo</a>
-                  <span class="text-category">Full Stack Application</span>
+              <a href="https://gw-coding-bingo.herokuapp.com" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Bingo</span>
+                    <span class="text-category" data-open="true">Full Stack Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -398,13 +414,15 @@
           <div class="mix frontend" href="img/portfolio_grid/rps.png" title="Rock Paper Scissors" desc="An interactive two-player game utilizing Firebase to store player information" tech="HTML, CSS, Bootstrap, Javascript, jQuery, and Firebase" github="https://github.com/jonchr/RPS-Multiplayer" livelink="https://jonchr.github.io/RPS-Multiplayer">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/rps.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Rock Paper Scissors</a>
-                  <span class="text-category">Front End Application with Database</span>
+              <a href="https://jonchr.github.io/RPS-Multiplayer" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Rock Paper Scissors</span>
+                    <span class="text-category" data-open="true">Front End Application with Database</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -412,41 +430,47 @@
           <div class="mix fullstack" href="img/portfolio_grid/nyt.png" title="New York Times Archiver" desc="An online archive of NYT articles built using React" tech="React.js, HTML, CSS, Javascript, Node, Express, Mongoose, and Axios" github="https://github.com/jonchr/NYT_Article_Archive" livelink="https://jons-nyt-archive.herokuapp.com">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/nyt.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">New York Times Archiver</a>
-                  <span class="text-category">Full Stack Application</span>
+              <a href="https://jons-nyt-archive.herokuapp.com" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">New York Times Archiver</span>
+                    <span class="text-category" data-open="true">Full Stack Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
           <!-- Grid Item 9 -->
-          <div class="mix backend" href="img/portfolio_grid/LIRIbot.png" title="LIRIbot" desc="A command-line based language interpreter" tech="Node, Spotify API, and Twitter API" github="https://github.com/jonchr/LIRIbot">
+          <div class="mix backend" href="img/portfolio_grid/LIRIbot.png" title="LIRIbot" desc="A command-line based language interpreter" tech="Node, Spotify API, and Twitter API" github="https://github.com/jonchr/LIRIbot" livelink="">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/LIRIbot.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">LIRI Bot</a>
-                  <span class="text-category">Back End Application</span>
+              <a href="https://github.com/jonchr/LIRIbot" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">LIRI Bot</span>
+                    <span class="text-category" data-open="true">Back End Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
           <!-- Grid Item 10 -->
-          <div class="mix fullstack" href="img/portfolio_grid/pawpal.png" title="PawPal" desc="An easy way to find your next four-legged friend" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, and Express.js" github="https://github.com/jonchr/Friend-Finder" livelink="https://radiant-shore-92391.herokuapp.com/">
+          <div class="mix fullstack" href="img/portfolio_grid/pawpal.png" title="PawPal" desc="An easy way to find your next four-legged friend" tech="HTML, CSS, Bootstrap, Javascript, jQuery, Node.js, and Express.js" github="https://github.com/jonchr/Friend-Finder" livelink="https://radiant-shore-92391.herokuapp.com">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/pawpal.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">PawPal</a>
-                  <span class="text-category">Full Stack Application</span>
+              <a href="https://radiant-shore-92391.herokuapp.com" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">PawPal</span>
+                    <span class="text-category" data-open="true">Full Stack Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -454,27 +478,31 @@
           <div class="mix backend" href="img/portfolio_grid/bamazon.png" title="Bamazon" desc="A back end command line interface for a retail store" tech="Node.js and the MySQL NPM module" github="https://github.com/jonchr/Bamazon" livelink="">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/bamazon.png" alt="">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title">Bamazon</a>
-                  <span class="text-category">Back End Application</span>
+              <a href="https://github.com/jonchr/Bamazon" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">Bamazon</span>
+                    <span class="text-category" data-open="true">Back End Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
 
           <!-- Grid Item 12 -->
-          <div class="mix frontend" href="img/portfolio_grid/psychic.png" title="The Psychic Game" desc="A letter-guessing game using basic Bootstrap and Javascript" tech="HTML, CSS, Bootstrap, and Javascript" github="https://github.com/jonchr/Psychic-Game/" livelink="https://jonchr.github.io/Psychic-Game/">
+          <div class="mix frontend" href="img/portfolio_grid/psychic.png" title="The Psychic Game" desc="A letter-guessing game using basic Bootstrap and Javascript" tech="HTML, CSS, Bootstrap, and Javascript" github="https://github.com/jonchr/Psychic-Game" livelink="https://jonchr.github.io/Psychic-Game">
             <div class="portfolio-wrapper">
               <img src="img/portfolio_grid/psychic.png" alt="Hello">
-              <div class="caption">
-                <div class="caption-text">
-                  <a class="text-title" href="https://jonchr.github.io/Psychic-Game/" target="_blank">The Psychic Game</a>
-                  <span class="text-category">Front End Application</span>
+              <a href="https://jonchr.github.io/Psychic-Game" target="_blank">
+                <div class="caption" data-open="true">
+                  <div class="caption-text" data-open="true">
+                    <span class="text-title" data-open="true">The Psychic Game</span>
+                    <span class="text-category" data-open="true">Front End Application</span>
+                  </div>
+                  <div class="caption-bg" data-open="true"></div>
                 </div>
-                <div class="caption-bg"></div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

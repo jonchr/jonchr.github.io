@@ -636,8 +636,8 @@ MagnificPopup.prototype = {
 	},
 	_openClick: function(e, el, options) {
 		
-		//^ If the 'data-open' value is true of the object the user clicks on, ends the popup openClick function to allow the parent a link to work
-		if($(e.target).attr("data-open")) {
+		//^ If the 'data-link' value is true of the object the user clicks on, ends the popup openClick function to allow the parent a link to work
+		if($(e.target).attr("data-link")) {
 			return;
 		}
 		

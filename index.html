@@ -286,7 +286,8 @@
             <h2>Portfolio</h2>
             <hr class="colored">
             <p>Here are some projects I've worked on.</p>
-            <div class="controls mt-3">
+            <!-- Project filtering buttons don't appear on mobile -->
+            <div class="controls mt-3 d-none d-lg-block">
                 <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter="all">All</button>
                 <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".frontend">Front End</button>
                 <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".backend">Back End</button>
@@ -294,7 +295,7 @@
                 <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".group">Group</button>
             </div>
             <!-- Instructions hidden on mobile devices/md screen size and smaller -->
-            <i class="instructions d-none d-lg-block">(Click the red slider for details or image to open in a new tab)</i>
+            <i class="instructions d-none d-lg-block">(Click the image to open in a new tab or the red slider for details)</i>
             <!-- Version with the red slides (caption) hidden on mobile devices. This section is for computers where clicking the image opens the link, while clicking the slider opens the detail panel -->
             <div class="portfolio-grid clearfix d-none d-lg-block" id="portfolioList">
                 <!-- Grid Item 1 -->
